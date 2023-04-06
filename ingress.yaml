@@ -20,6 +20,6 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: aws-cluster-service
+            name: nginx
             port:
               number: 80
