@@ -18,4 +18,4 @@ spec:
         image: 654399508061.dkr.ecr.us-east-2.amazonaws.com/my-ecr-repo:${IMAGE_TAG}
         ports:
         - containerPort: 80
-
+      priorityClassName: high-priority
