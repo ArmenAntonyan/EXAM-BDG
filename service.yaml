@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: AWS-CLUSTER-service
+  name: aws-cluster-service
   namespace: devops-intermidate
 spec:
   selector:
