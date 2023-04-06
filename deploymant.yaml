@@ -15,7 +15,8 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: 654399508061.dkr.ecr.us-east-2.amazonaws.com/my-ecr-repo:${IMAGE_TAG}
+        #image: 654399508061.dkr.ecr.us-east-2.amazonaws.com/my-ecr-repo:${IMAGE_TAG}
+        image: nginx
         ports:
         - containerPort: 80
 #      priorityClassName: high-priority
