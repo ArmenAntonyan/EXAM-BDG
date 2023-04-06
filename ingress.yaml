@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: my-ingress
+  name: nginx
   namespace: devops-intermidate
   annotations:
     my-image.ingress.kubernetes.io/ssl-redirect: "false"
@@ -11,7 +11,7 @@ metadata:
     # alb.ingress.kubernetes.io/scheme: internet-facing
     # alb.ingress.kubernetes.io/target-type: instance
 spec:
-  ingressClassName: alb
+  ingressClassName: nginx
   rules:
   - host: hello.team2.local
     http:
