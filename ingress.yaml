@@ -13,7 +13,7 @@ metadata:
 spec:
   ingressClassName: alb
   rules:
-  - host: test.team2.com
+  - host: hello.team2.local
     http:
       paths:
       - path: /
