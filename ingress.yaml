@@ -2,7 +2,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: nginx
-  namespace: devops-intermidate
+  namespace: ingress-nginx
   annotations:
     my-image.ingress.kubernetes.io/ssl-redirect: "false"
     my-image.ingress.kubernetes.io/use-regex: "true"
