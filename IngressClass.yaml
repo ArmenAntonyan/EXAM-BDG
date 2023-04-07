@@ -4,5 +4,5 @@ metadata:
   name: alb
   namespace: devops-intermidate
 spec:
-  controller: k8s.io/internal-ingress-nginx
+  controller: ingress.k8s.aws/alb
   
