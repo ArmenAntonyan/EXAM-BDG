@@ -4,8 +4,5 @@ metadata:
   name: alb
   namespace: devops-intermidate
 spec:
-  controller: ingress.k8s.aws/alb
-  parameters:
-    apiGroup: elbv2.k8s.aws
-    kind: IngressClassParams
-    name: awesome-class-cfg
+  controller: alb.ingress.kubernetes.io
+  
