@@ -14,15 +14,11 @@ spec:
         app: nginx
     spec:
       containers:
+      - args:
+        - --ingress-class=alb
       - name: nginx
         image: 654399508061.dkr.ecr.us-east-2.amazonaws.com/my-ecr-repo:${IMAGE_TAG}
         ports:
         - containerPort: 80
-      # - name: ingress-nginx-internal-controller
-      #   args:
-      #     - /nginx-ingress-controller
-      #     - '--election-id=ingress-controller-leader'
-      #     - '--controller-class=k8s.io/internal-ingress-nginx'
-      #     - '--ingress-class=k8s.io/internal-nginx'
             
 

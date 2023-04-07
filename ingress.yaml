@@ -3,13 +3,6 @@ kind: Ingress
 metadata:
   name: nginx
   namespace: devops-intermidate
-  annotations:
-    my-image.ingress.kubernetes.io/ssl-redirect: "false"
-    my-image.ingress.kubernetes.io/use-regex: "true"
-    my-image.ingress.kubernetes.io/rewrite-target: /$1
-    # kubernetes.io/ingress.class: alb
-    # alb.ingress.kubernetes.io/scheme: "internet-facing"
-    # alb.ingress.kubernetes.io/target-type: "instance"
 spec:
   ingressClassName: alb
   rules:
