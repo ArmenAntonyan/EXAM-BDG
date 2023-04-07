@@ -2,21 +2,20 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nginx
-  namespace: ingress-nginx
+  namespace: devops-intermidate
 spec:
   replicas: 1
   selector:
     matchLabels:
-      tier: nginx
+      app: nginx
   template:
     metadata:
       labels:
-        tier: nginx
+        app: nginx
     spec:
       containers:
       - name: nginx
-        #image: 654399508061.dkr.ecr.us-east-2.amazonaws.com/my-ecr-repo:${IMAGE_TAG}
-        image: nginx
+        image: 654399508061.dkr.ecr.us-east-2.amazonaws.com/my-ecr-repo:${IMAGE_TAG}
         ports:
         - containerPort: 80
-#      priorityClassName: high-priority
+

@@ -2,10 +2,10 @@ apiVersion: v1
 kind: Service
 metadata:
   name: nginx
-  namespace: ingress-nginx
+  namespace: devops-intermidate
 spec:
   selector:
-    tier: nginx
+    app: nginx
   ports:
   - protocol: TCP
     port: 80
