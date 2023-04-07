@@ -14,8 +14,6 @@ spec:
         app: nginx
     spec:
       containers:
-      - args:
-        - --ingress-class=alb
       - name: nginx
         image: 654399508061.dkr.ecr.us-east-2.amazonaws.com/my-ecr-repo:${IMAGE_TAG}
         ports:
