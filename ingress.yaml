@@ -4,10 +4,9 @@ metadata:
   name: nginx
   namespace: devops-intermidate
   annotations:
-    service.beta.kubernetes.io/aws-load-balancer-webhook-dns-zone: "aws-load-balancer-webhook-service.kube-system.svc.cluster.local"
-    my-image.ingress.kubernetes.io/ssl-redirect: "false"
-    my-image.ingress.kubernetes.io/use-regex: "true"
-    my-image.ingress.kubernetes.io/rewrite-target: /$1
+    alb.ingress.kubernetes.io/scheme: internet-facing
+    alb.ingress.kubernetes.io/target-type: ip
+    alb.ingress.kubernetes.io/subnets: subnet-0d8746dc28ebd1d3b, subnet-0e55d9614ba176b10
 spec:
   ingressClassName: nginx
   rules:
