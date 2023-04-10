@@ -5,7 +5,7 @@ metadata:
   namespace: devops-intermidate
 spec:
   selector:
-    app: nginx
+    app: my-nginx-ingress-nginx-controller
   ports:
   - protocol: TCP
     port: 80
