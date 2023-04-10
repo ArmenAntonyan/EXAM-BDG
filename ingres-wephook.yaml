@@ -1,0 +1,18 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: my-ingress
+  annotations:
+    service.beta.kubernetes.io/aws-load-balancer-webhook-dns-zone: "aws-load-balancer-webhook-service.kube-system.svc.cluster.local"
+spec:
+  rules:
+    - host: example.com
+      http:
+        paths:
+          - path: /hello
+            pathType: Prefix
+            backend:
+              service:
+                name: my-service
+                port:
+                  name: http
