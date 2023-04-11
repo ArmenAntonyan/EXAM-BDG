@@ -4,11 +4,11 @@ metadata:
   name: nginx
   namespace: devops-intermidate
   annotations:
-    my-image.ingress.kubernetes.io/ssl-redirect: "false"
-    my-image.ingress.kubernetes.io/use-regex: "true"
-    my-image.ingress.kubernetes.io/rewrite-target: /$1
+    alb.ingress.kubernetes.io/scheme: internet-facing
+    alb.ingress.kubernetes.io/target-type: ip
+    alb.ingress.kubernetes.io/subnets: subnet-0c79447990709dd8b, subnet-0998c5824cb9f5d0b
 spec:
-  ingressClassName: nginx
+  ingressClassName: alb
   rules:
   - host: hello.team2.local
     http:
